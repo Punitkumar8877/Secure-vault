@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Secure Vault - Decrypt File</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="decrypt-container">
+        <h2>🔓 Decrypt a File</h2>
+        <p class="description">Upload your encrypted file and securely decrypt it in seconds.</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" enctype="multipart/form-data" class="decrypt-form" id="decryptForm">
+            <label class="file-label">
+                <i class="fas fa-file-download"></i> Choose Encrypted File
+                <input type="file" name="file" id="fileInput" required>
+            </label>
+
+            <!-- Display Selected Filename -->
+            <p id="fileNameDisplay" class="file-name-display"></p>
+
+            <!-- Progress Bar -->
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <button type="submit" class="decrypt-btn">🔓 Decrypt File</button>
+        </form>
+
+        <a href="/dashboard" class="back-btn">⬅️ Back to Dashboard</a>
+    </div>
+
+    <script>
+        // Display Selected Filename
+        document.getElementById('fileInput').addEventListener('change', function() {
+            const fileName = this.files[0] ? this.files[0].name : "No file selected";
+            document.getElementById('fileNameDisplay').textContent = `Selected File: ${fileName}`;
+        });
+
+        // Progress
+    </script>
+</body>
+</html>

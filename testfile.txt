@@ -1,0 +1,6 @@
+This is a sample text file for testing encryption.
+Confidential information inside!
+
+            in 37 line
+
+            <a href="{{ url_for('forgot_password') }}">Forgot Password?</a> &nbsp; | &nbsp;

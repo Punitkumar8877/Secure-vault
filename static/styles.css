@@ -1,0 +1,300 @@
+/* General Styling */
+body {
+    background-color: #131313;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+/* Login & Upload Containers */
+.login-container, .upload-container {
+    background-color: #121111;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 255, 123, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+/* Headers */
+.login-header h1, .upload-container h2 {
+    color: #00FF7F;
+    margin-bottom: 10px;
+}
+
+.login-header h3 {
+    color: #ddd;
+    margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-group {
+    background-color: #393939;
+    display: flex;
+    align-items: center;
+    border: 2px solid #00FF7F;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.input-group i {
+    margin-right: 10px;
+    color: #00FF7F;
+}
+
+.input-group input {
+    background: none;
+    border: none;
+    color: #ffffff;
+    outline: none;
+    width: 100%;
+}
+
+/* Buttons */
+.login-btn, .upload-btn {
+    background-color: #00FF7F;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.login-btn:hover, .upload-btn:hover {
+    background-color: #00cc66;
+}
+
+/* File Upload Field */
+.file-label {
+    background-color: #373838;
+    color: #00FF7F;
+    border: 2px solid #00FF7F;
+    border-radius: 8px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.file-label input {
+    display: none;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* Success & Error Messages */
+.success {
+    color: #00FF7F;
+    margin-top: 10px;
+}
+
+.danger {
+    color: #FF4500;
+    margin-top: 10px;
+}
+/* Dashboard Container */
+.dashboard-container {
+    background-color: #1E1E1E;
+    color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 255, 123, 0.3);
+    width: 90%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    color: #00FF7F;
+    margin-bottom: 5px;
+}
+
+.dashboard-header p {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* Cards Layout */
+.dashboard-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #2A2A2A;
+    border: 2px solid #00FF7F;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 255, 123, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 255, 123, 0.4);
+}
+
+.card-icon {
+    font-size: 40px;
+    color: #00FF7F;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #aaa;
+    margin-bottom: 15px;
+}
+
+/* Card Buttons */
+.card-btn {
+    display: inline-block;
+    background-color: #00FF7F;
+    color: #121212;
+    padding: 8px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.card-btn:hover {
+    background-color: #00cc66;
+}
+
+/* Logout Card */
+.logout-card {
+    background-color: #FF4500;
+    border: 2px solid #FF6347;
+}
+
+.logout-btn {
+    background-color: #ffffff;
+    color: #FF4500;
+}
+
+.logout-btn:hover {
+    background-color: #ffdddd;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    color: #777;
+    font-size: 0.9rem;
+}
+/* Decrypt Container */
+.decrypt-container {
+    background-color: #1E1E1E;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 24px rgba(0, 255, 123, 0.3);
+    width: 350px;
+    text-align: center;
+}
+
+.decrypt-container h2 {
+    color: #00FF7F;
+    margin-bottom: 5px;
+}
+
+.decrypt-container .description {
+    color: #bbb;
+    margin-bottom: 20px;
+}
+
+/* File Upload Field */
+.file-label {
+    background-color: #2A2A2A;
+    color: #00FF7F;
+    border: 2px solid #00FF7F;
+    border-radius: 8px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.file-label input {
+    display: none;
+}
+
+/* Progress Bar */
+.progress-container {
+    background-color: #2A2A2A;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 8px;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #00FF7F;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+/* Decrypt Button */
+.decrypt-btn {
+    background-color: #00FF7F;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.decrypt-btn:hover {
+    background-color: #00cc66;
+}
+
+/* Back Button */
+.back-btn {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+/* Success & Error Messages */
+.success {
+    color: #00FF7F;
+    margin-top: 10px;
+}
+
+.danger {
+    color: #FF4500;
+    margin-top: 10px;
+}

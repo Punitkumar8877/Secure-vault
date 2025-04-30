@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Secure Vault - Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>🔐 Secure Vault</h1>
+            <p>Welcome, <b>{{ username }}</b>!</p>
+        </div>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <i class="fas fa-upload card-icon"></i>
+                <h3>Encrypt a File</h3>
+                <p>Upload and secure your files with one click.</p>
+                <a href="/upload" class="card-btn">Go to Upload</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-unlock-alt card-icon"></i>
+                <h3>Decrypt a File</h3>
+                <p>Decrypt previously encrypted files safely.</p>
+                <a href="/decrypt" class="card-btn">Go to Decrypt</a>
+            </div>
+
+            <div class="card">
+                <i class="fas fa-key card-icon"></i>
+                <h3>Change Password</h3>
+                <p>Keep your account secure by updating your password.</p>
+                <a href="/change_password" class="card-btn">Change Password</a>
+            </div>
+
+            <div class="card logout-card">
+                <i class="fas fa-sign-out-alt card-icon"></i>
+                <h3>Logout</h3>
+                <p>End your session securely.</p>
+                <a href="/logout" class="card-btn logout-btn">Logout Now</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2025 Secure Vault. All rights reserved by PUNIT.</p>
+        </footer>
+    </div>
+</body>
+</html>

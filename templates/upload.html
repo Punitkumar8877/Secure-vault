@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Secure Vault - Upload</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script>
+        // Display selected file name dynamically
+        function displayFileName(input) {
+            const fileNameDisplay = document.getElementById("file-name-display");
+            if (input.files && input.files[0]) {
+                fileNameDisplay.textContent = `Selected File: ${input.files[0].name}`;
+            } else {
+                fileNameDisplay.textContent = ""; // Clear if no file is selected
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="upload-container">
+        <h2>📂 Upload & Encrypt File</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <label class="file-label">
+                <i class="fas fa-file-upload"></i> Choose File
+                <input type="file" name="file" onchange="displayFileName(this)" required>
+            </label>
+
+            <!-- Display file name here -->
+            <p id="file-name-display" class="file-name-display"></p>
+
+            <button type="submit" class="upload-btn">Encrypt & Upload</button>
+        </form>
+
+        <a href="/dashboard" class="back-btn">⬅️ Back to Dashboard</a>
+    </div>
+</body>
+</html>
